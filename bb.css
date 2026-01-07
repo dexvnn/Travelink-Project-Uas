@@ -1,0 +1,240 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;   
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+/* Container */
+#container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    background-image: url('gambar/danau\ senn.jpg'); /* Gambar pertama */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(135deg, #081f54, #2b3e9e);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    animation: slideUpDown 3s infinite alternate ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #101f43, #2b3e9e);
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #005fa3;
+    border-radius: 5px;
+}
+/* Main Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px; /* Tambahkan jarak 40px dari header */
+}
+
+.left {
+    background-color: #3382b0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 65%;
+    height: 70%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.right {
+    background-color: #578cb7;
+    border-radius: 10px;
+    padding: 10px;
+    width: 35%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left img {
+    display: block;
+    margin: 0 auto 5px;
+    border-radius: 10px;
+}
+
+.left p {
+    text-align: justify;
+}
+
+.right h1 {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.right ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.right ul li {
+    margin-bottom: 10px;
+}
+
+/* Button */
+button {
+    background: linear-gradient(135deg, #101f43, #2b3e9e);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 8px;
+    transition: background-color 0.3s;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #3d538e;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+}
+
+/* Animasi */
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+#header {
+    animation: slideUpDown 3s infinite alternate ease-in-out;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-image img {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-description {
+    max-width: 200px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}

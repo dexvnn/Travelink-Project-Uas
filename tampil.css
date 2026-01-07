@@ -1,0 +1,26 @@
+/* Membuat container tabel dengan scroll */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: linear-gradient(135deg, #081f54, #2b3e9e);
+    color: white;
+    position: sticky;  /* Membuat header tetap di atas */
+    top: 0;  /* Posisi header */
+    z-index: 1;  /* Menyimpan header di atas konten lain */
+}
+
+/* Atur tinggi tabel untuk scroll */
+#container {
+    max-height: 700px;  /* Sesuaikan tinggi tabel sesuai kebutuhan */
+    overflow-y: auto;  /* Gulir vertikal */
+    border: 1px;
+    background: linear-gradient(135deg, #081f54, #2b3e9e);
+}

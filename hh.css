@@ -1,0 +1,294 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+html, body {
+    background-color: #f4f4f4;
+    color: #000000;
+    overflow: hidden;
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* Container */
+#container {
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('gambar/danau\ senn.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(135deg, #081f54, #2b3e9e);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    animation: slideUpDown 5s ease-in-out infinite; /* Perbaikan disini */
+}
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0); /* Supaya kembali ke posisi awal */
+    }
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.xixi {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #101f43, #2b3e9e);
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #005fa3;
+    border-radius: 5px;
+}
+
+.greeting-container {
+    width: 50%; /* Sesuaikan lebar secara otomatis */
+    max-width: 500px; /* Batas maksimal lebar */
+    color: rgb(36, 33, 33); /* Warna teks */
+    font-size: 10px; /* Ukuran font lebih kecil */
+}
+
+
+/* Main Content */
+.content {
+    padding: 0px;
+}
+
+.content img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.hihi {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.hihi h1 {
+    font-size: 1.8rem;
+    color: #0078D7;
+    margin-top: 20px;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.hidden-text {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover .hidden-text {
+    display: block;
+}
+
+/* Form Section */
+.contact-us {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.contact-us form .form-row {
+    margin-bottom: 15px;
+}
+
+.contact-us label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-us button:hover {
+    background-color: #005fa3;
+}
+
+.xoxo {
+    background: linear-gradient(135deg, #101f43, #2b3e9e);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    position: absolute;
+    top: 65%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.xoxo a {
+    color: white;
+    text-decoration: none; /* Pastikan juga elemen <a> di dalam xoxo tidak bergaris bawah */
+}
+
+.xoxo:hover {
+    background: linear-gradient(135deg, #0078d7, #00c6ff);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.btn {
+    background: linear-gradient(135deg, #101f43, #2b3e9e);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 450px;
+    transition: background-color 0.3s;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn :hover {
+    background-color: #3d538e;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: 70px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
